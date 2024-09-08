@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhpfmthwykem2"]
+
+[ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_5vq7b"]
+
+[node name="Start_Menu" type="Node2D"]
+script = ExtResource("1_5vq7b")
+
+[node name="Game_Title" type="Label" parent="."]
+offset_left = 500.0
+offset_top = 200.0
+offset_right = 584.0
+offset_bottom = 225.0
+scale = Vector2(4, 4)
+size_flags_vertical = 1
+text = "Game Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start_Game" type="Button" parent="."]
+offset_left = 580.0
+offset_top = 450.0
+offset_right = 676.0
+offset_bottom = 481.0
+scale = Vector2(2, 2)
+text = "Start Game
+"
+
+[node name="Credits" type="Button" parent="."]
+offset_left = 600.0
+offset_top = 700.0
+offset_right = 663.0
+offset_bottom = 731.0
+scale = Vector2(2, 2)
+text = "Credits"
+
+[connection signal="pressed" from="Start_Game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

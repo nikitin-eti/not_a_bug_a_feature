@@ -28,7 +28,7 @@ func move_character_body() -> void:
 		$AnimatedSprite2D.play("idle")
 
 	velocity = velocity.normalized() * speed
-	self.velocity = velocity
+	set_velocity(velocity)
 	move_and_slide()
 
 

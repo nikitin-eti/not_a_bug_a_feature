@@ -84,3 +84,12 @@ offset = Vector2(2.04565, -10.9101)
 [node name="PlayerShape" type="CollisionShape2D" parent="."]
 position = Vector2(-0.0808468, 0.119707)
 shape = SubResource("RectangleShape2D_ppk8o")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 2024
+limit_bottom = 2024
+limit_smoothed = true
+position_smoothing_enabled = true

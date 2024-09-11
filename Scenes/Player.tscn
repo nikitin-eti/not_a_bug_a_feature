@@ -68,25 +68,23 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppk8o"]
-size = Vector2(0.916264, 0.993985)
+size = Vector2(6.13342, 4.72396)
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(18.5536, 18.5536)
 script = ExtResource("1_n5ugn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.123737, 0.123737)
 sprite_frames = SubResource("SpriteFrames_k237c")
 animation = &"eat"
 frame_progress = 0.616727
 offset = Vector2(2.04565, -10.9101)
 
 [node name="PlayerShape" type="CollisionShape2D" parent="."]
-position = Vector2(-0.0808468, 0.119707)
+position = Vector2(-0.467914, 0.952037)
+scale = Vector2(0.825669, 1.24982)
 shape = SubResource("RectangleShape2D_ppk8o")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+[node name="CameraPlayer" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
 limit_right = 2024

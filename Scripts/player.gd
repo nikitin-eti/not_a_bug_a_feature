@@ -1,13 +1,26 @@
 extends CharacterBody2D
 
-var speed: float = 50.0
-var camera_zoom: Vector2 = Vector2(10, 10)
-var current_health: int = 3 # Максимум 3 жизни
+@export var speed: float = 50.0
+@export var camera_zoom: Vector2 = Vector2(2, 2) # 10,10
+@export var map_size_holder_path: String = "MapSizeHolder"
+
+var current_health: int                  = 3
+var map_rect: Rect2
+
 
 func _ready() -> void:
 	add_to_group("players")
 	$CameraPlayer.set_zoom(camera_zoom)
-# Отображение жизней может быть реализовано через интерфейс (HUD), например через спрайты сердечек
+
+	var map_size_holder: Node = get_tree().current_scene.get_node(map_size_holder_path)
+	if map_size_holder:
+		map_rect = Rect2(map_size_holder.position, map_size_holder.size)
+		map_size_holder.hide()
+		$CameraPlayer.limit_right = map_rect.size.x
+		$CameraPlayer.limit_bottom = map_rect.size.y
+	else:
+		print("MapSizeHolder not found")
+
 
 func move_character_body(delta: float) -> void:
 	var velocity_player: Vector2 = Vector2()
@@ -27,20 +40,35 @@ func move_character_body(delta: float) -> void:
 	set_velocity(velocity_player)
 	move_and_slide()
 
+	limit_to_map_boundaries()
+
+
+func limit_to_map_boundaries() -> void:
+	if position.x < map_rect.position.x:
+		position.x = map_rect.position.x
+	elif position.x > map_rect.position.x + map_rect.size.x:
+		position.x = map_rect.position.x + map_rect.size.x
+
+	if position.y < map_rect.position.y:
+		position.y = map_rect.position.y
+	elif position.y > map_rect.position.y + map_rect.size.y:
+		position.y = map_rect.position.y + map_rect.size.y
+
+
 func _process(delta: float) -> void:
 	move_character_body(delta)
 
-# Функция получения урона
+
 func take_damage(amount: int) -> void:
-	current_health -= amount # Уменьшаем количество жизней
+	current_health -= amount
 	if current_health <= 0:
 		current_health = 0
-		game_over() # Вызываем функцию проигрыша, если жизни закончились
+		game_over()
 	else:
-		print("Player took damage. Current current_health:", current_health)
+		print("Player took damage. Current health:", current_health)
+
 
 # Функция проигрыша
 func game_over() -> void:
-	print("Game Over! Player has no current_health left.")
-	# Здесь можно добавить логику для завершения игры, перезагрузки уровня, показа экрана смерти и т.д.
-	queue_free() # Удаляем игрока из сцены (или можно перезапустить игру)
+	print("Game Over! Player has no health left.")
+	queue_free()

@@ -32,9 +32,9 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("players"):
-		body.item_eaten()
 		if effect_scene:
 			var effect = effect_scene.instantiate()
 			effect.position = position
 			get_tree().current_scene.add_child(effect)
 		queue_free()
+		body.item_eaten()

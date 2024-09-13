@@ -97,8 +97,7 @@ func take_damage(amount: int) -> void:
 
 func game_over() -> void:
 	print("Game Over! Player has no health left.")
-	queue_free()
-	get_tree().change_scene_to_file("res://Scenes/Stage_1.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Stages/Stage_1.tscn")
 
 
 func item_eaten() -> void:
@@ -111,7 +110,6 @@ func item_eaten() -> void:
 
 
 func check_next_level() -> void:
-	if items_eaten >= 20:
-		queue_free()
+	if items_eaten >= 15:
 		get_tree().change_scene_to_file("res://Scenes/Cutscene_End.tscn")
 		print("Player has eaten enough items to go to the next level.")

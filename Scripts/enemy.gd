@@ -65,6 +65,8 @@ func _process(delta: float) -> void:
 
 
 func check_boundaries() -> void:
+	if position.x < 375:
+		random_direction.x *= -1
 	if position.x < map_rect.position.x or position.x > map_rect.position.x + map_rect.size.x:
 		random_direction.x *= -1
 	if position.y < map_rect.position.y or position.y > map_rect.position.y + map_rect.size.y:

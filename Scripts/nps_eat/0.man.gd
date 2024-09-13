@@ -1,8 +1,28 @@
 extends Area2D
 
-@export var effect_scene: PackedScene
+@export var effect_scene: PackedScene = preload("res://Scenes/EatScenes/effect_eat.tscn")
+@export var sprite_key: String = "default"
+
+var sprite_paths = {
+					   "ball": "res://Resources/Sprites/Objects & NPCs/Ball.png",
+					   "beach_umbrella": "res://Resources/Sprites/Objects & NPCs/BeachUmbrella.png",
+					   "child_f_water": "res://Resources/Sprites/Objects & NPCs/ChildFWater.png",
+					   "child_m": "res://Resources/Sprites/Objects & NPCs/ChildM.png",
+					   "child_m_water": "res://Resources/Sprites/Objects & NPCs/ChildMWater.png",
+					   "cyan_towel": "res://Resources/Sprites/Objects & NPCs/CyanTowel.png",
+					   "dog": "res://Resources/Sprites/Objects & NPCs/Dog.png",
+					   "pink_towel": "res://Resources/Sprites/Objects & NPCs/PinkTowel.png",
+					   "volleyball_net": "res://Resources/Sprites/Objects & NPCs/Volleyball Net.png",
+					   "ship": "res://Resources/Sprites/Objects & NPCs/Ship.png"
+				   }
 
 func _ready() -> void:
+	var sprite = $Sprite
+	if sprite_key in sprite_paths:
+		sprite.texture = load(sprite_paths[sprite_key])
+	else:
+		print("Sprite key not found: ", sprite_key)
+
 	self.connect("body_entered", Callable(self, "_on_body_entered"))
 
 func _on_body_entered(body: Node) -> void:

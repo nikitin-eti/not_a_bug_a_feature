@@ -7,7 +7,7 @@ extends CharacterBody2D
 var current_health: int = 3
 var map_rect: Rect2
 var items_eaten: int = 0
-var scale_increase: float = 0.1
+var scale_increase: float = 0.2
 
 func _ready() -> void:
 	add_to_group("players")

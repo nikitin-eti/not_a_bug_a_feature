@@ -36,14 +36,222 @@ metadata/_edit_lock_ = true
 [node name="Player" parent="." instance=ExtResource("2_c24d1")]
 position = Vector2(600, 920)
 
-[node name="Enemy" parent="." instance=ExtResource("3_j4ylw")]
-position = Vector2(552, 1056)
+[node name="eat_obj" type="Node2D" parent="."]
 
-[node name="0Man" parent="." instance=ExtResource("4_nudqr")]
-position = Vector2(128, 904)
+[node name="water_obj" type="Node2D" parent="eat_obj"]
 
-[node name="0Man2" parent="." instance=ExtResource("4_nudqr")]
-position = Vector2(256, 840)
+[node name="child_f_water" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(80, 1264)
+sprite_key = "child_f_water"
 
-[node name="0Man3" parent="." instance=ExtResource("4_nudqr")]
-position = Vector2(128, 1088)
+[node name="child_f_water2" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(120, 1128)
+sprite_key = "child_f_water"
+
+[node name="child_f_water3" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(184, 1272)
+sprite_key = "child_f_water"
+
+[node name="child_f_water4" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(112, 1352)
+sprite_key = "child_f_water"
+
+[node name="child_f_water5" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(144, 736)
+sprite_key = "child_f_water"
+
+[node name="child_f_water6" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(216, 576)
+sprite_key = "child_f_water"
+
+[node name="child_f_water7" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(64, 496)
+sprite_key = "child_f_water"
+
+[node name="child_f_water8" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(48, 640)
+sprite_key = "child_f_water"
+
+[node name="child_f_water9" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(72, 848)
+sprite_key = "ship"
+
+[node name="child_m_water" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(88, 1032)
+
+[node name="child_m_water2" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(200, 1448)
+
+[node name="child_m_water3" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(272, 1504)
+
+[node name="child_m_water4" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(64, 1488)
+
+[node name="beach_obj" type="Node2D" parent="eat_obj"]
+
+[node name="cyan_towel" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(488, 632)
+sprite_key = "cyan_towel"
+
+[node name="cyan_towel2" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(712, 624)
+sprite_key = "cyan_towel"
+
+[node name="cyan_towel3" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(728, 1080)
+sprite_key = "cyan_towel"
+
+[node name="cyan_towel4" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(456, 1432)
+sprite_key = "cyan_towel"
+
+[node name="cyan_towel5" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(176, 280)
+sprite_key = "cyan_towel"
+
+[node name="pink_towel" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(344, 288)
+sprite_key = "pink_towel"
+
+[node name="pink_towel2" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(704, 232)
+sprite_key = "pink_towel"
+
+[node name="beach_umbrella" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(672, 864)
+sprite_key = "beach_umbrella"
+
+[node name="beach_umbrella2" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(632, 1240)
+sprite_key = "beach_umbrella"
+
+[node name="beach_umbrella3" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(432, 680)
+sprite_key = "beach_umbrella"
+
+[node name="beach_umbrella4" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(408, 456)
+sprite_key = "beach_umbrella"
+
+[node name="beach_umbrella5" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(480, 152)
+sprite_key = "beach_umbrella"
+
+[node name="beach_umbrella6" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(360, 152)
+sprite_key = "beach_umbrella"
+
+[node name="beach_umbrella7" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(224, 152)
+sprite_key = "beach_umbrella"
+
+[node name="beach_umbrella8" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(88, 152)
+sprite_key = "beach_umbrella"
+
+[node name="beach_umbrella9" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(656, 144)
+sprite_key = "beach_umbrella"
+
+[node name="beach_umbrella10" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(656, 144)
+sprite_key = "beach_umbrella"
+
+[node name="ball" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(808, 1016)
+sprite_key = "ball"
+
+[node name="ball2" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(504, 768)
+sprite_key = "ball"
+
+[node name="ball3" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(656, 560)
+sprite_key = "ball"
+
+[node name="dog9" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(536, 240)
+sprite_key = "ball"
+
+[node name="dog8" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(1168, 584)
+sprite_key = "dog"
+
+[node name="dog6" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(1152, 1136)
+sprite_key = "dog"
+
+[node name="dog7" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(1048, 1368)
+sprite_key = "dog"
+
+[node name="dog5" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(1216, 848)
+sprite_key = "dog"
+
+[node name="dog4" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(1032, 680)
+sprite_key = "dog"
+
+[node name="dog" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(1208, 456)
+sprite_key = "dog"
+
+[node name="dog2" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(1160, 400)
+sprite_key = "dog"
+
+[node name="dog3" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(944, 176)
+sprite_key = "dog"
+
+[node name="child_m4" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(736, 920)
+sprite_key = "child_m"
+
+[node name="child_m3" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(528, 480)
+sprite_key = "child_m"
+
+[node name="child_m2" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(432, 1208)
+sprite_key = "child_m"
+
+[node name="child_m" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(648, 1384)
+sprite_key = "child_m"
+
+[node name="pink_towel3" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(784, 792)
+sprite_key = "pink_towel"
+
+[node name="pink_towel4" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(784, 1288)
+sprite_key = "pink_towel"
+
+[node name="pink_towel5" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(440, 888)
+sprite_key = "pink_towel"
+
+[node name="volleyball_net" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(584, 696)
+sprite_key = "volleyball_net"
+
+[node name="volleyball_net2" parent="eat_obj/beach_obj" instance=ExtResource("4_nudqr")]
+position = Vector2(584, 816)
+sprite_key = "volleyball_net"
+
+[node name="enemy_obj" type="Node2D" parent="."]
+
+[node name="Enemy" parent="enemy_obj" instance=ExtResource("3_j4ylw")]
+position = Vector2(496, 1080)
+
+[node name="Enemy2" parent="enemy_obj" instance=ExtResource("3_j4ylw")]
+position = Vector2(608, 1200)
+
+[node name="Enemy3" parent="enemy_obj" instance=ExtResource("3_j4ylw")]
+position = Vector2(680, 1032)
+
+[node name="Enemy4" parent="enemy_obj" instance=ExtResource("3_j4ylw")]
+position = Vector2(680, 1032)

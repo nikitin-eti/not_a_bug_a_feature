@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://d33ut5ld4wh4u"]
+[gd_scene load_steps=7 format=4 uid="uid://d33ut5ld4wh4u"]
 
 [ext_resource type="Texture2D" uid="uid://b8kgpfv65vexg" path="res://Resources/Sprites/Tiles/all_tiles.png" id="1_kk4kk"]
 [ext_resource type="PackedScene" uid="uid://cx64gg5lg3ojb" path="res://Scenes/Player.tscn" id="2_c24d1"]
 [ext_resource type="PackedScene" uid="uid://bthhrk2cbmeb6" path="res://Scenes/Enemies/enemy.tscn" id="3_j4ylw"]
+[ext_resource type="PackedScene" uid="uid://dh5cfpu1uqcf0" path="res://Scenes/EatScenes/nps/stage1/0.man.tscn" id="4_nudqr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xix5e"]
 texture = ExtResource("1_kk4kk")
@@ -33,22 +34,16 @@ color = Color(0.27451, 1, 1, 0.105882)
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_c24d1")]
-position = Vector2(520, 984)
+position = Vector2(600, 920)
 
 [node name="Enemy" parent="." instance=ExtResource("3_j4ylw")]
 position = Vector2(552, 1056)
 
-[node name="Enemy2" parent="." instance=ExtResource("3_j4ylw")]
-position = Vector2(432, 976)
+[node name="0Man" parent="." instance=ExtResource("4_nudqr")]
+position = Vector2(128, 904)
 
-[node name="Enemy5" parent="." instance=ExtResource("3_j4ylw")]
-position = Vector2(560, 984)
+[node name="0Man2" parent="." instance=ExtResource("4_nudqr")]
+position = Vector2(256, 840)
 
-[node name="Enemy6" parent="." instance=ExtResource("3_j4ylw")]
-position = Vector2(680, 1024)
-
-[node name="Enemy3" parent="." instance=ExtResource("3_j4ylw")]
-position = Vector2(472, 1032)
-
-[node name="Enemy4" parent="." instance=ExtResource("3_j4ylw")]
-position = Vector2(592, 1016)
+[node name="0Man3" parent="." instance=ExtResource("4_nudqr")]
+position = Vector2(128, 1088)

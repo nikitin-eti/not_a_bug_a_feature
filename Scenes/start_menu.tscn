@@ -1,37 +1,95 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhpfmthwykem2"]
+[gd_scene load_steps=6 format=3 uid="uid://bhpfmthwykem2"]
 
 [ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_5vq7b"]
+[ext_resource type="Texture2D" uid="uid://bf8jc3a0xtvai" path="res://Resources/Sprites/menu/gggroud.png" id="2_tvggr"]
+[ext_resource type="Texture2D" uid="uid://by2k45uhfoxqy" path="res://Resources/Sprites/menu/ggutto.png" id="3_b8q84"]
+[ext_resource type="Texture2D" uid="uid://m1fohld0e10d" path="res://Resources/Sprites/menu/gglogo.png" id="3_h13xa"]
+[ext_resource type="FontFile" uid="uid://3uk7vvrkmoo3" path="res://Resources/font/Pixellari.ttf" id="4_no7re"]
 
-[node name="Start_Menu" type="Node2D"]
+[node name="Start_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1920.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_5vq7b")
 
-[node name="Game_Title" type="Label" parent="."]
-offset_left = 500.0
-offset_top = 200.0
-offset_right = 584.0
-offset_bottom = 225.0
-scale = Vector2(4, 4)
-size_flags_vertical = 1
-text = "Game Title"
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Gggroud" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_tvggr")
+
+[node name="Start_Game" type="TextureButton" parent="."]
+layout_mode = 0
+offset_top = -40.0
+offset_right = 1920.0
+offset_bottom = 1040.0
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(960, 544)
+texture_normal = ExtResource("3_b8q84")
+
+[node name="Label" type="Label" parent="Start_Game"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.117
+anchor_top = 0.326
+anchor_right = 0.917
+anchor_bottom = 0.681
+offset_left = -0.640015
+offset_top = 31.92
+offset_right = -32.6401
+offset_bottom = -51.48
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 30
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("4_no7re")
+theme_override_font_sizes/font_size = 290
+text = "Play"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Start_Game" type="Button" parent="."]
-offset_left = 580.0
-offset_top = 450.0
-offset_right = 676.0
-offset_bottom = 481.0
-scale = Vector2(2, 2)
-text = "Start Game
-"
+[node name="Start_Game2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 1920.0
+offset_bottom = 1200.0
+scale = Vector2(0.22, 0.22)
+pivot_offset = Vector2(960, 544)
+texture_normal = ExtResource("3_b8q84")
 
-[node name="Credits" type="Button" parent="."]
-offset_left = 600.0
-offset_top = 700.0
-offset_right = 663.0
-offset_bottom = 731.0
-scale = Vector2(2, 2)
+[node name="Label" type="Label" parent="Start_Game2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.117
+anchor_top = 0.326
+anchor_right = 0.917
+anchor_bottom = 0.681
+offset_left = -0.640015
+offset_top = 31.92
+offset_right = -32.6401
+offset_bottom = -51.48
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 30
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("4_no7re")
+theme_override_font_sizes/font_size = 290
 text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gglogo" type="Sprite2D" parent="."]
+position = Vector2(968, 236)
+texture = ExtResource("3_h13xa")
 
 [connection signal="pressed" from="Start_Game" to="." method="_on_start_game_pressed"]
-[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Start_Game2" to="." method="_on_credits_pressed"]

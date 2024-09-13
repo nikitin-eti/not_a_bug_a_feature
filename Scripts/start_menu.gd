@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 #Start game when button pressed
 func _on_start_game_pressed() -> void:

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dh5cfpu1uqcf0"]
+
+[ext_resource type="Texture2D" uid="uid://dreff3wpyoe40" path="res://Resources/Sprites/Objects & NPCs/ChildMWater.png" id="1_0wxdp"]
+[ext_resource type="Script" path="res://Scripts/nps_eat/0.man.gd" id="1_vrxi8"]
+[ext_resource type="PackedScene" uid="uid://d1g3njtgfs4ei" path="res://Scenes/EatScenes/effect_eat.tscn" id="2_l571t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jes8b"]
+radius = 8.0
+height = 32.0
+
+[node name="0Man" type="Area2D"]
+script = ExtResource("1_vrxi8")
+effect_scene = ExtResource("2_l571t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CapsuleShape2D_jes8b")
+
+[node name="ChildMWater" type="Sprite2D" parent="."]
+texture = ExtResource("1_0wxdp")
+offset = Vector2(0, -8)

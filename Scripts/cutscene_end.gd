@@ -13,8 +13,6 @@ func start_video() -> void:
 	if video_player:
 		video_player.play()
 		video_player.finished.connect(_on_video_finished)
-	else:
-		print("VideoStreamPlayer не найден")
 
 func _on_video_finished() -> void:
 	sprite.show()

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var obj_bullet: PackedScene
 @export var shooting_patterns: Array[int] = [0, 1, 2, 3, 4, 5]
+@export var animation_choice: int
 
 var shooting_pattern: int
 var movement_timer: float         = 0.0
@@ -11,6 +12,9 @@ var spiral_angle: float           = 0.0
 var map_rect: Rect2
 var direction_change_timer: float = 0.0
 var bullet_color: Color
+var last_direction_x: float = 1.0
+
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _ready() -> void:
@@ -28,6 +32,14 @@ func _ready() -> void:
 
 	set_process(true)
 	set_physics_process(true)
+	
+	print("Animation choice: ", animation_choice)
+	if animation_choice == 1:
+		sprite.play("car")
+	elif animation_choice == 2:
+		sprite.play("tank")
+	else:
+		print("Invalid animation choice")
 
 
 func _process(delta: float) -> void:
@@ -62,6 +74,7 @@ func _process(delta: float) -> void:
 	move_and_slide()
 
 	check_boundaries()
+	update_scale()
 
 
 func check_boundaries() -> void:
@@ -117,3 +130,13 @@ func shoot(direction: float, speed: float) -> void:
 func set_random_direction() -> void:
 	var random_angle: float = randf_range(0, 360)
 	random_direction = Vector2.RIGHT.rotated(deg_to_rad(random_angle))
+
+
+func update_scale() -> void:
+	# Определяем текущее направление по оси X
+	var current_direction_x = sign(velocity.x)
+
+	# Обновляем масштаб только при изменении направления
+	if current_direction_x != last_direction_x:
+		scale.x = -1.0 if current_direction_x < 0 else 1.0
+		last_direction_x = current_direction_x

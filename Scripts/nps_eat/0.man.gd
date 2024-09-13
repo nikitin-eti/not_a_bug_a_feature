@@ -13,7 +13,12 @@ var sprite_paths = {
 					   "dog": "res://Resources/Sprites/Objects & NPCs/Dog.png",
 					   "pink_towel": "res://Resources/Sprites/Objects & NPCs/PinkTowel.png",
 					   "volleyball_net": "res://Resources/Sprites/Objects & NPCs/Volleyball Net.png",
-					   "ship": "res://Resources/Sprites/Objects & NPCs/Ship.png"
+					   "ship": "res://Resources/Sprites/Objects & NPCs/Ship.png",
+					   "flowers": "res://Resources/Sprites/lvls/Town - Level/Objects & NPCs/FlowersTrees.png",
+					   "house": "res://Resources/Sprites/lvls/Town - Level/Objects & NPCs/House.png",
+					   "car1": "res://Resources/Sprites/lvls/Town - Level/Objects & NPCs/Silver Car.png",
+					   "car2": "res://Resources/Sprites/lvls/Town - Level/Objects & NPCs/Red Car.png",
+	
 				   }
 
 func _ready() -> void:
@@ -27,6 +32,7 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("players"):
+		body.item_eaten()
 		if effect_scene:
 			var effect = effect_scene.instantiate()
 			effect.position = position

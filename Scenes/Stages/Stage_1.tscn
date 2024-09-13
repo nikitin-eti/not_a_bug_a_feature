@@ -38,7 +38,7 @@ position = Vector2(128, 784)
 sprite_key = "child_f_water"
 
 [node name="child_f_water5" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
-position = Vector2(144, 736)
+position = Vector2(200, 720)
 sprite_key = "child_f_water"
 
 [node name="child_f_water6" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
@@ -59,15 +59,19 @@ sprite_key = "ship"
 
 [node name="child_m_water" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
 position = Vector2(88, 1032)
+sprite_key = "child_m_water"
 
 [node name="child_m_water2" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
 position = Vector2(216, 880)
+sprite_key = "child_m_water"
 
 [node name="child_m_water3" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
 position = Vector2(288, 936)
+sprite_key = "child_m_water"
 
 [node name="child_m_water4" parent="eat_obj/water_obj" instance=ExtResource("4_nudqr")]
 position = Vector2(80, 920)
+sprite_key = "child_m_water"
 
 [node name="beach_obj" type="Node2D" parent="eat_obj"]
 
@@ -193,7 +197,7 @@ position = Vector2(528, 569)
 animation_choice = 1
 
 [node name="Enemy8" parent="enemy_obj" instance=ExtResource("3_j4ylw")]
-position = Vector2(416, 760)
+position = Vector2(792, 582)
 animation_choice = 1
 
 [node name="Enemy10" parent="enemy_obj" instance=ExtResource("3_j4ylw")]
@@ -201,7 +205,7 @@ position = Vector2(520, 856)
 animation_choice = 1
 
 [node name="Enemy9" parent="enemy_obj" instance=ExtResource("3_j4ylw")]
-position = Vector2(680, 712)
+position = Vector2(1424, 832)
 animation_choice = 1
 
 [node name="0Man" parent="." instance=ExtResource("4_nudqr")]
